@@ -1,5 +1,5 @@
 {
-  "name": "my-turborepo",
+  "name": "giffin",
   "private": true,
   "scripts": {
     "build": "turbo run build",
