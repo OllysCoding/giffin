@@ -12,6 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { config } from "@giffin/eslint-config/base";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { App } from "./pages/App.js";
 
-export default config
+import "antd/dist/reset.css";
+
+createRoot(document.getElementById("root")!).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+);

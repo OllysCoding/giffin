@@ -1,6 +1,7 @@
 {
   "name": "giffin",
   "private": true,
+  "author": "OllysCoding",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",

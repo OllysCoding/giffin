@@ -1,5 +1,5 @@
 {
-  "extends": "@giffin/typescript-config/react.json",
+  "extends": "@giffin/typescript-config/nextjs.json",
   "compilerOptions": {
     "plugins": [
       {
@@ -10,6 +10,9 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
+    "next-env.d.ts",
+    "next.config.js",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"

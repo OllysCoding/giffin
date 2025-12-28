@@ -1,4 +1,21 @@
-# Turborepo starter
+# GIFFIN: Generate GIFs of your favourite shows & movies with ease
+
+GIFFIN lets you search your jellyfin media library by dialogue, and automatically generate GIFs for any matches. 
+
+For example, if you searched for "Bagel! Bagel!", you could generate a GIF of [this classic moment](https://youtu.be/AS38I3esj0o?si=e3H9PnAlGen9ZVdd&t=86) from Brooklyn Nine Nine.
+
+---
+
+<h2 align=center>🛠️ Project under active development 🛠️</h2>
+<p align=center>There is no official release yet, and breaking changes will be actively made until v0.1 is released</p>
+
+---
+
+
+
+----
+
+## Turborepo starter
 
 This Turborepo starter is maintained by the Turborepo core team.
 

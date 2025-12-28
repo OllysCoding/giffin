@@ -12,6 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { config } from "@giffin/eslint-config/base";
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
 
-export default config
+// https://vite.dev/config/
+export default defineConfig({
+  build: {
+    outDir: "./dist",
+  },
+  plugins: [react()],
+  server: {
+    proxy: {
+      "/api": "http://localhost:4000",
+    },
+  },
+});
