@@ -1,11 +1,8 @@
 {
   "extends": "@giffin/typescript-config/base.json",
   "compilerOptions": {
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
   },
   "include": [
     "**/*.ts",

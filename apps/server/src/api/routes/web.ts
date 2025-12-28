@@ -12,24 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import "reflect-metadata";
-import "dotenv/config";
+import fastifyStatic from "@fastify/static";
+import { FastifyInstance } from "fastify";
+import path from 'node:path';
 
-import { Container } from "typedi";
-
-import { initializeApi } from "./api/index.js";
-
-import { logger } from "./logger.js";
-import { TestService } from "./services/TestService.js";
-
-const initialize = async () => {
-  logger.info("Starting services...");
-
-  await Container.get(TestService).load();
-
-  logger.info("Services successfully started");
-
-  await initializeApi();
-};
-
-initialize();
+export const webRoutes = async (
+  fastify: FastifyInstance,
+  // options: FastifyRegisterOptions<never>,
+) => {
+    if (typeof process.env.STATIC_FRONTEND_PATH === 'string') {
+        fastify.register(fastifyStatic, {
+            root: process.env.STATIC_FRONTEND_PATH,
+        });
+    }
+}

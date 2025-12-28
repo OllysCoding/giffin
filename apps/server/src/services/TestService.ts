@@ -12,24 +12,27 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import "reflect-metadata";
-import "dotenv/config";
+import { Service } from "typedi";
+import { GiffinService } from "./types.js";
+import { success } from "../result/index.js";
 
-import { Container } from "typedi";
 
-import { initializeApi } from "./api/index.js";
 
-import { logger } from "./logger.js";
-import { TestService } from "./services/TestService.js";
+@Service()
+export class TestService implements GiffinService {
+  constructor() {}
 
-const initialize = async () => {
-  logger.info("Starting services...");
 
-  await Container.get(TestService).load();
+  public load = () => {
+    return Promise.resolve(success(undefined));
+  };
 
-  logger.info("Services successfully started");
+  public unload = () => {
+    return Promise.resolve(success(undefined));
+  };
 
-  await initializeApi();
-};
-
-initialize();
+  public run = () => {
+    // Do Nothing
+    return Promise.resolve(success(undefined));
+  };
+}

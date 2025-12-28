@@ -12,24 +12,26 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import "reflect-metadata";
-import "dotenv/config";
+import Fastify from "fastify";
+import fastifyStatic from "@fastify/static";
 
-import { Container } from "typedi";
+import errorsPlugin from "./plugins/errors.js";
+import { webRoutes } from "./routes/web.js";
 
-import { initializeApi } from "./api/index.js";
+const V1_API_BASE = "/api/v1";
 
-import { logger } from "./logger.js";
-import { TestService } from "./services/TestService.js";
+export const initializeApi = async () => {
+  const fastify = Fastify({
+    logger: true,
+  });
 
-const initialize = async () => {
-  logger.info("Starting services...");
+  // Register plugins
+  fastify.register(errorsPlugin);
 
-  await Container.get(TestService).load();
+  // Register web app
+  fastify.register(webRoutes, {
+    prefix: '/app'
+  });
 
-  logger.info("Services successfully started");
-
-  await initializeApi();
+  await fastify.listen({ port: 4000 });
 };
-
-initialize();
