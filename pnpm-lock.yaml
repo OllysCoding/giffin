@@ -60,6 +60,9 @@ importers:
       '@fastify/static':
         specifier: ^9.0.0
         version: 9.0.0
+      '@sinclair/typebox':
+        specifier: ^0.34.45
+        version: 0.34.45
       dotenv:
         specifier: ^17.2.3
         version: 17.2.3
@@ -1319,6 +1322,9 @@ packages:
 
   '@sec-ant/readable-stream@0.4.1':
     resolution: {integrity: sha512-831qok9r2t8AlxLko40y2ebgSDhenenCatLVeW/uBtnHPyhHOvG0C7TvfgecV+wHzIm5KUICgzmVpWS+IMEAeg==}
+
+  '@sinclair/typebox@0.34.45':
+    resolution: {integrity: sha512-qJcFVfCa5jxBFSuv7S5WYbA8XdeCPmhnaVVfX/2Y6L8WYg8sk3XY2+6W0zH+3mq1Cz+YC7Ki66HfqX6IHAwnkg==}
 
   '@sindresorhus/is@5.6.0':
     resolution: {integrity: sha512-TV7t8GKYaJWsn00tFDqBw8+Uqmr8A0fRU1tvTQhyZzGv0sJCGRQL3JGMI3ucuKo3XIZdUP+Lx7/gh2t3lewy7g==}
@@ -4130,6 +4136,8 @@ snapshots:
     optional: true
 
   '@sec-ant/readable-stream@0.4.1': {}
+
+  '@sinclair/typebox@0.34.45': {}
 
   '@sindresorhus/is@5.6.0': {}
 

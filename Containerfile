@@ -47,6 +47,7 @@ COPY ./apps ./apps
 COPY ./packages ./packages
 RUN ["pnpm", "i"]
 RUN ["pnpm", "run", "build"]
+RUN mv ./apps/server/.env.container ./apps/server/.env 
 
 EXPOSE 8080
  

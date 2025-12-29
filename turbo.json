@@ -1,7 +1,13 @@
 {
   "$schema": "https://turborepo.com/schema.json",
   "ui": "tui",
-  "globalEnv": ["PORT", "HOST", "STATIC_FRONTEND_PATH"],
+  "globalEnv": [
+    "PORT",
+    "HOST",
+    "STATIC_FRONTEND_PATH",
+    "MEDIA_PATH",
+    "OUTPUT_PATH"
+  ],
   "tasks": {
     "build": {
       "dependsOn": ["^build"],

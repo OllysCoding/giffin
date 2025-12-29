@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@fastify/static": "^9.0.0",
+    "@sinclair/typebox": "^0.34.45",
     "dotenv": "^17.2.3",
     "execa": "^9.6.1",
     "fastify": "^5.6.2",

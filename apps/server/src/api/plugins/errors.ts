@@ -10,8 +10,7 @@ export enum ApiErrorType {
   APP_NOT_INITIALIZED = 100,
   APP_ALREADY_INITIALIZED = 101,
   UNABLE_TO_INITIALIZE = 102,
-  UNABLE_TO_ADD_RESOURCE = 200,
-  UNABLE_TO_UPDATE_RESOURCE = 201,
+  UNABLE_TO_GENERATE_GIF = 301,
 }
 
 declare module "fastify" {
@@ -52,17 +51,10 @@ const pluginCallback: FastifyPluginCallback = (fastify, options, done) => {
           });
           break;
         }
-        case ApiErrorType.UNABLE_TO_ADD_RESOURCE: {
+        case ApiErrorType.UNABLE_TO_GENERATE_GIF: {
           this.status(500).send({
             ...baseError,
-            message: "Unable to add resource",
-          });
-          break;
-        }
-        case ApiErrorType.UNABLE_TO_UPDATE_RESOURCE: {
-          this.status(500).send({
-            ...baseError,
-            message: "Unable to update resource",
+            message: "Unable to generate gif",
           });
           break;
         }
