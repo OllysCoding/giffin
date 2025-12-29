@@ -13,7 +13,6 @@
 // limitations under the License.
 
 import Fastify from "fastify";
-import fastifyStatic from "@fastify/static";
 
 import errorsPlugin from "./plugins/errors.js";
 import { webRoutes } from "./routes/web.js";
@@ -29,9 +28,8 @@ export const initializeApi = async () => {
   fastify.register(errorsPlugin);
 
   // Register web app
-  fastify.register(webRoutes, {
-    prefix: '/app'
-  });
+  fastify.register(webRoutes);
 
-  await fastify.listen({ port: 4000 });
+  const port = process.env.PORT ? parseInt(process.env.PORT) : 4000
+  await fastify.listen({ port, host: process.env.HOST });
 };
