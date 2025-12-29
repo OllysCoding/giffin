@@ -8,7 +8,7 @@ import { GiffinService } from "./types.js";
 import { success } from "../result/index.js";
 
 @Service()
-export class TestService implements GiffinService {
+export class GIFService implements GiffinService {
   constructor() {}
 
   public load = () => {

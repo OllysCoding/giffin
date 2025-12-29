@@ -9,6 +9,7 @@
     "lint": "turbo run lint",
     "docker:build": "docker build -t giffin -f Containerfile .",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-format": "prettier \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types"
   },
   "devDependencies": {

@@ -1,6 +1,6 @@
 <!--
  Copyright (c) 2025 olly
- 
+
  This software is released under the MIT License.
  https://opensource.org/licenses/MIT
 -->
@@ -18,7 +18,6 @@ This repo uses npm workspaces and is split into two main top level folders:
 
 To run this project locally, FFMPEG must be available in your PATH, for MacOS, you can install it with `brew install ffmpeg`.
 
-### Building docker container 
+### Building docker container
 
 In project root "pnpm run docker:build"
-
