@@ -17,7 +17,7 @@ import Fastify from "fastify";
 import errorsPlugin from "./plugins/errors.js";
 import { webRoutes } from "./routes/web.js";
 
-const V1_API_BASE = "/api/v1";
+// const V1_API_BASE = "/api/v1";
 
 export const initializeApi = async () => {
   const fastify = Fastify({
